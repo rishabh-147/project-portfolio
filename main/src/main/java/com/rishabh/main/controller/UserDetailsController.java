@@ -16,8 +16,8 @@ public class UserDetailsController {
 	@Autowired
 	UserDetailsSvcInterface userDetailsSvc ;
 	
-	@GetMapping("getUser/{userId}")
-	public ResponseEntity<?> getUser(@PathVariable("userId") int userId){
-		return userDetailsSvc.getUserDetails(userId);
+	@GetMapping("getUser")
+	public ResponseEntity<?> getUser(@PathVariable("userName") String userName){
+		return userDetailsSvc.getUserDetails(userName);
 	}
 }

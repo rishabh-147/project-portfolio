@@ -15,9 +15,9 @@ public class UserDetailsSvcImpl implements UserDetailsSvcInterface{
 	UserDetailsRepoInterface userDetailsRepo ;
 
 	@Override
-	public ResponseEntity<?> getUserDetails(int userId) {
+	public ResponseEntity<?> getUserDetails(String userName) {
 		
-		UserDetails res = userDetailsRepo.getUserDetails(userId);
+		UserDetails res = userDetailsRepo.getUserDetails(userName);
 		
 		return new ResponseEntity<UserDetails>(res, HttpStatusCode.valueOf(200));
 	}
