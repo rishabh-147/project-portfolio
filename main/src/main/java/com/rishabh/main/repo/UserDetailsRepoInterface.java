@@ -4,5 +4,5 @@ import com.rishabh.main.domain.UserDetails;
 
 public interface UserDetailsRepoInterface {
 
-	public UserDetails getUserDetails(String userName);
+	public UserDetails getUserDetails(int userId);
 }
