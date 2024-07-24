@@ -1,24 +1,26 @@
 package com.rishabh.main.repo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.rishabh.main.domain.UserDetails;
-import com.rishabh.main.util.JDBCObjectProvider;
 import com.rishabh.main.util.QueryConstants;
 
 @Repository
 public class UserDetailsRepoImpl implements UserDetailsRepoInterface{
 	
 //	getting JDBC Template object
-	JdbcTemplate jdbcTemplate = JDBCObjectProvider.getJdbcObj();
+	@Autowired
+	JdbcTemplate jdbcTemplate;
 
 	@Override
-	public UserDetails getUserDetails(String userName) {
+	public UserDetails getUserDetails(int userId) {
 		
-		Object[] args = {userName};
-		return jdbcTemplate.queryForObject(QueryConstants.GET_USER_DETAILS, args,BeanPropertyRowMapper.newInstance(UserDetails.class));
+		
+		return jdbcTemplate.queryForObject(QueryConstants.GET_USER_DETAILS, BeanPropertyRowMapper.newInstance(UserDetails.class), userId);
+//		return jdbcTemplate.queryForObject(QueryConstants.GET_USER_DETAILS, args,BeanPropertyRowMapper.newInstance(UserDetails.class));
 	}
 	
 }

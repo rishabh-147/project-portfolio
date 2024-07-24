@@ -4,5 +4,5 @@ import org.springframework.http.ResponseEntity;
 
 public interface UserDetailsSvcInterface {
 	
-	public ResponseEntity<?> getUserDetails(String userName);
+	public ResponseEntity<?> getUserDetails(int userName);
 }
