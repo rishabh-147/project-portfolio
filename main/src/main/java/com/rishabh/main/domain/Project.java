@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Project {
-    private Long projectId;
-    private Long userId;
+    private int projectId;
+    private int userId;
     private String title;
     private String description;
     private LocalDate startDate;
@@ -18,8 +18,8 @@ public class Project {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Project(Long projectId, Long userId, String title, String description, LocalDate startDate,
-			LocalDate endDate, String url, LocalDateTime createdAt, LocalDateTime updatedAt) {
+	public Project(int projectId, int userId, String title, String description, LocalDate startDate, LocalDate endDate,
+			String url, LocalDateTime createdAt, LocalDateTime updatedAt) {
 		super();
 		this.projectId = projectId;
 		this.userId = userId;
@@ -32,19 +32,19 @@ public class Project {
 		this.updatedAt = updatedAt;
 	}
 
-	public Long getProjectId() {
+	public int getProjectId() {
 		return projectId;
 	}
 
-	public void setProjectId(Long projectId) {
+	public void setProjectId(int projectId) {
 		this.projectId = projectId;
 	}
 
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
@@ -110,7 +110,7 @@ public class Project {
 				+ description + ", startDate=" + startDate + ", endDate=" + endDate + ", url=" + url + ", createdAt="
 				+ createdAt + ", updatedAt=" + updatedAt + "]";
 	}
+
     
-    // Getters and Setters (omitted for brevity)
 }
 

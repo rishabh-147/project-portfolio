@@ -26,33 +26,34 @@ public class ProjectSkillRepo {
 
 			@Override
 			public ProjectSkillJunction mapRow(ResultSet rs, int rowNum) throws SQLException {
-				
-				 // Create a Project object
-		        Project project = new Project();
-		        project.setP_projectID(rs.getInt("project_id"));
-		        project.setP_userID(rs.getInt("user_id")); // Assuming this is in the result set
-		        project.setP_title(rs.getString("title"));
-		        project.setP_description(rs.getString("description"));
-		        project.setP_startDate(rs.getObject("start_date", LocalDate.class));
-		        project.setP_endDate(rs.getObject("end_date", LocalDate.class));
-		        project.setP_url(rs.getString("url"));
-		        project.setP_createdAt(rs.getObject("created_at", LocalDateTime.class));
-		        project.setP_updatedAt(rs.getObject("updated_at", LocalDateTime.class));
+			    // Create and populate a Project object
+			    Project project = new Project();
+			    project.setProjectId(rs.getInt("project_id"));
+			    project.setTitle(rs.getString("title"));
+			    project.setDescription(rs.getString("description"));
+			    project.setStartDate(rs.getObject("start_date", LocalDate.class));
+			    project.setEndDate(rs.getObject("end_date", LocalDate.class));
+			    project.setUrl(rs.getString("url"));
+			    project.setCreatedAt(rs.getObject("created_at", LocalDateTime.class));
+			    project.setUpdatedAt(rs.getObject("updated_at", LocalDateTime.class));
+			    
+			    // Create and populate a Skill object
+			    Skill skill = new Skill();
+			    skill.setSkillId(rs.getInt("skill_id"));
+			    skill.setName(rs.getString("name"));
+			    skill.setProficiency(rs.getString("proficiency"));
 
-		        // Create a Skill object
-		        Skill skill = new Skill();
-		        skill.setSkillID(rs.getInt("skill_id"));
-		        skill.setName(rs.getString("name"));
-		        skill.setProficiency(rs.getString("proficiency"));
+			    // Create and populate a ProjectSkillJunction object
+			    ProjectSkillJunction projectSkill = new ProjectSkillJunction();
+			    projectSkill.setProjectSkillId(rs.getInt("projectskill_id")); 
+			    projectSkill.setProjectId(project.getProjectId());
+			    projectSkill.setProject(project);
+			    projectSkill.setSkillId(skill.getSkillId());
+			    projectSkill.setSkill(skill);
 
-		        // Create and populate a ProjectSkill object
-		        ProjectSkillJunction projectSkill = new ProjectSkillJunction();
-		        projectSkill.setProjectSkillId(rs.getInt("project_skill_id"));
-		        projectSkill.setProject(project);
-		        projectSkill.setSkill(skill);
-
-		        return projectSkill;
+			    return projectSkill;
 			}
+
 			
 		}, projectId);
 		

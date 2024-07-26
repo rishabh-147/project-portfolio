@@ -3,8 +3,8 @@ package com.rishabh.main.domain;
 import java.time.LocalDateTime;
 
 public class Skill {
-    private Long skillId;
-    private Long userId;
+    private int skillId;
+    private int userId;
     private String name;
     private String proficiency;
     private LocalDateTime createdAt;
@@ -14,7 +14,7 @@ public class Skill {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Skill(Long skillId, Long userId, String name, String proficiency, LocalDateTime createdAt,
+	public Skill(int skillId, int userId, String name, String proficiency, LocalDateTime createdAt,
 			LocalDateTime updatedAt) {
 		super();
 		this.skillId = skillId;
@@ -27,19 +27,19 @@ public class Skill {
 	
 	
 
-	public Long getSkillId() {
+	public int getSkillId() {
 		return skillId;
 	}
 
-	public void setSkillId(Long skillId) {
+	public void setSkillId(int skillId) {
 		this.skillId = skillId;
 	}
 
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
