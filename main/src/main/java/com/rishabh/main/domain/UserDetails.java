@@ -4,19 +4,19 @@ import java.sql.Date;
 
 public class UserDetails {
 
-	public int userId;
-	public String userName;
-	public String pwdHash;
-	public String emailId;
-	public String fullName;
-	public String bio;
-	public String avatarURL;
-	public Date createdOn;
-	
+	private int userId;
+	private String userName;
+	private String pwdHash;
+	private String emailId;
+	private String fullName;
+	private String bio;
+	private String avatarURL;
+	private Date createdOn;
+
 	public UserDetails() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public UserDetails(int userId, String userName, String pwdHash, String emailId, String fullName, String bio,
 			String avatarURL, Date createdOn) {
 		super();
@@ -100,5 +100,5 @@ public class UserDetails {
 				+ emailId + ", fullName=" + fullName + ", bio=" + bio + ", avatarURL=" + avatarURL + ", createdOn="
 				+ createdOn + "]";
 	}
-	
+
 }

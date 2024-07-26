@@ -1,0 +1,8 @@
+com\rishabh\main\controller\UserDetailsController.class
+com\rishabh\main\MainApplication.class
+com\rishabh\main\domain\UserDetails.class
+com\rishabh\main\repo\UserDetailsRepoImpl.class
+com\rishabh\main\svc\UserDetailsSvcImpl.class
+com\rishabh\main\repo\UserDetailsRepoInterface.class
+com\rishabh\main\svc\UserDetailsSvcInterface.class
+com\rishabh\main\util\QueryConstants.class
