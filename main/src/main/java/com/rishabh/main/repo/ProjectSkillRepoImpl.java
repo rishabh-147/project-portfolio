@@ -17,7 +17,7 @@ import com.rishabh.main.domain.Skill;
 import com.rishabh.main.util.QueryConstants;
 
 @Repository
-public class ProjectSkillRepo implements ProjectSkillRepoInterface{
+public class ProjectSkillRepoImpl implements ProjectSkillRepoInterface{
 		
 	@Autowired
 	JdbcTemplate jdbcTemplate;

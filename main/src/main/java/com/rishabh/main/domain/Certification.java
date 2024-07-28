@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Certification {
-    private Long certificationId;
-    private Long userId;
+    private int certificationId;
+    private int userId;
     private String name;
     private String authority;
     private String licenseNumber;
@@ -20,7 +20,7 @@ public class Certification {
 	}
 
     
-	public Certification(Long certificationId, Long userId, String name, String authority, String licenseNumber,
+	public Certification(int certificationId, int userId, String name, String authority, String licenseNumber,
 			LocalDate startDate, LocalDate endDate, String url, LocalDateTime createdAt, LocalDateTime updatedAt) {
 		super();
 		this.certificationId = certificationId;
@@ -36,22 +36,22 @@ public class Certification {
 	}
 
 
-	public Long getCertificationId() {
+	public int getCertificationId() {
 		return certificationId;
 	}
 
 
-	public void setCertificationId(Long certificationId) {
+	public void setCertificationId(int certificationId) {
 		this.certificationId = certificationId;
 	}
 
 
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
 
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 

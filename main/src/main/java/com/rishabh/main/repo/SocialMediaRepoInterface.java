@@ -7,5 +7,5 @@ import com.rishabh.main.domain.SocialMedia;
 public interface SocialMediaRepoInterface {
 
 	public SocialMedia getByPlatform(String platform);
-	public List<SocialMedia> getAllSM();
+	public List<SocialMedia> getAllSM(Integer userId);
 }
