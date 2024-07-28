@@ -3,6 +3,7 @@ package com.rishabh.main.repo;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,8 +18,8 @@ public class SkillRepoImpl implements SkillRepoInterface {
 	JdbcTemplate jdbcTemplate;
 	
 	@Override
-	public Skill getAll(int userId) {
-		return (Skill) jdbcTemplate.query(QueryConstants.GET_SKILL_DETAILS, new RowMapper<Skill> () {
+	public List<Skill> getAll(int userId) {
+		return jdbcTemplate.query(QueryConstants.GET_SKILL_DETAILS, new RowMapper<Skill> () {
 			  
 			@Override
 			public Skill mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -29,9 +30,8 @@ public class SkillRepoImpl implements SkillRepoInterface {
 			skill.setProficiency(rs.getString("proficiency"));
 			skill.setCreatedAt(rs.getObject("createdAt", LocalDateTime.class));
 			skill.setUpdatedAt(rs.getObject("updatedAt", LocalDateTime.class));
-							
-								
-				return skill;
+			
+			return skill;
 			}
 			
 		},userId);	
