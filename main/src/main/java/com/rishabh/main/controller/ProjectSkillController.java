@@ -16,6 +16,8 @@ public class ProjectSkillController {
 	@Autowired
 	private ProjectSkillSvcInterface projectSkillSvc;
 	
+	
+	// http://localhost:8080/getProjects/getDetails/1
 	@GetMapping("getDetails/{projectId}")
 	public ResponseEntity<?> getProejctDetails(@PathVariable("projectId") int projectId){
 		return projectSkillSvc.getByProject(projectId);

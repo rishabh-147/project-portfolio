@@ -3,8 +3,8 @@ package com.rishabh.main.domain;
 import java.time.LocalDateTime;
 
 public class Contact {
-    private Long contactId;
-    private Long userId;
+    private int contactId;
+    private int userId;
     private String type;
     private String value;
     private LocalDateTime createdAt;
@@ -16,7 +16,7 @@ public class Contact {
 	}
     
     
-	public Contact(Long contactId, Long userId, String type, String value, LocalDateTime createdAt,
+	public Contact(int contactId, int userId, String type, String value, LocalDateTime createdAt,
 			LocalDateTime updatedAt) {
 		super();
 		this.contactId = contactId;
@@ -28,22 +28,22 @@ public class Contact {
 	}
 
 
-	public Long getContactId() {
+	public int getContactId() {
 		return contactId;
 	}
 
 
-	public void setContactId(Long contactId) {
+	public void setContactId(int contactId) {
 		this.contactId = contactId;
 	}
 
 
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
 
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 

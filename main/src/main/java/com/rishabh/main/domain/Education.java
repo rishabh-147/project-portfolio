@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Education {
-    private Long educationId;
-    private Long userId;
+    private int educationId;
+    private int userId;
     private String institution;
     private String degree;
     private String fieldOfStudy;
@@ -20,7 +20,7 @@ public class Education {
 	}
     
     
-	public Education(Long educationId, Long userId, String institution, String degree, String fieldOfStudy,
+	public Education(int educationId, int userId, String institution, String degree, String fieldOfStudy,
 			LocalDate startDate, LocalDate endDate, String description, LocalDateTime createdAt,
 			LocalDateTime updatedAt) {
 		super();
@@ -39,22 +39,22 @@ public class Education {
 	
 	
 
-	public Long getEducationId() {
+	public int getEducationId() {
 		return educationId;
 	}
 
 
-	public void setEducationId(Long educationId) {
+	public void setEducationId(int educationId) {
 		this.educationId = educationId;
 	}
 
 
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
 
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 

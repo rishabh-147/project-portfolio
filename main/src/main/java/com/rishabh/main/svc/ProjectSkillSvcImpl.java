@@ -8,13 +8,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.rishabh.main.domain.ProjectSkillJunction;
-import com.rishabh.main.repo.ProjectSkillRepo;
+import com.rishabh.main.repo.ProjectSkillRepoImpl;
+import com.rishabh.main.repo.ProjectSkillRepoInterface;
 
 @Service
 public class ProjectSkillSvcImpl implements ProjectSkillSvcInterface{
 	
 	@Autowired
-	ProjectSkillRepo projectSkillRepo;
+	ProjectSkillRepoInterface projectSkillRepo;
 
 	@Override
 	public ResponseEntity<?> getByProject(int projectId) {
