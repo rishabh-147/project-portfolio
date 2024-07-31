@@ -5,4 +5,5 @@
 API repo and services have almost completed as of today date : **30th July 2024**
 
 ## Looking forward to create controllers and endpoints
-# Controllers for PojectSkill Junc
+### Controllers for PojectSkill Junc
+### Controllers for UserDetails table also ready
