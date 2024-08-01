@@ -20,7 +20,7 @@ public class SocialMediaRepoImpl implements SocialMediaRepoInterface {
 	
 	@Override
 	public SocialMedia getByPlatform(String platform) {
-		return (SocialMedia) jdbcTemplate.query(QueryConstants.GET_SOCIALMEDIA_DETAILS, new RowMapper<SocialMedia> () {
+		return jdbcTemplate.queryForObject(QueryConstants.GET_SOCIALMEDIA_DETAILS, new RowMapper<SocialMedia> () {
 		    
 			@Override
 			public SocialMedia mapRow(ResultSet rs, int rowNum) throws SQLException {
