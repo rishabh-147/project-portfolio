@@ -176,6 +176,21 @@ This document provides detailed information about the controllers in the applica
 - The response format and error messages may vary based on the implementation details of each service interface and error handling in the application.
 - Comprehensive exception handling and logging should be implemented to provide clear and meaningful error responses.
 
+## List of Controllers
+Certainly! Here's a simple tabular list of fully qualified URLs for all the controllers with `userId` set to `1`:
+
+| **Controller**                | **Description**                            | **Fully Qualified URL**                           |
+|-------------------------------|--------------------------------------------|---------------------------------------------------|
+| **Certificate Controller**    | Get All Certifications for a User          | `http://localhost:8080/certificate/all/1`         |
+| **Contact Controller**        | Get All Contacts for a User                | `http://localhost:8080/contact/all/1`             |
+| **Education Controller**      | Get All Education Records for a User       | `http://localhost:8080/edu/all/1`                 |
+| **Experience Controller**     | Get All Experience Records by Company      | `http://localhost:8080/exp/all/TechCorp`          |
+| **Project Skill Controller**  | Get Project Details                       | `http://localhost:8080/getProjects/getDetails/1` |
+| **Social Media Controller**   | Get Social Media Data by Platform          | `http://localhost:8080/socialmedia/platform/Twitter` |
+| **Social Media Controller**   | Get All Social Media Records for a User    | `http://localhost:8080/socialmedia/all/1`         |
+| **User Details Controller**   | Get User Details                           | `http://localhost:8080/user-details/getUser/1`    |
+
+This table lists each controller, a brief description of the endpoint, and the fully qualified URL with `userId` set to `1` where applicable. For endpoints that don't use `userId`, such as the Experience Controller or Social Media by Platform, example values are provided.
 ---
 
 This README provides a structured and detailed overview of all the controllers in your application. Adjust or expand the documentation as necessary to match any additional specifics or requirements.
