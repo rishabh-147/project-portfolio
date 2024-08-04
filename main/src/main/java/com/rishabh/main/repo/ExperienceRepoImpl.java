@@ -9,11 +9,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import com.rishabh.main.domain.Education;
 import com.rishabh.main.domain.Experience;
 import com.rishabh.main.util.QueryConstants;
-
+@Repository
 public class ExperienceRepoImpl implements ExperienceRepoInterface {
 
 	@Autowired

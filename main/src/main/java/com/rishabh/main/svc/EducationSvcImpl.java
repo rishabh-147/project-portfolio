@@ -12,7 +12,7 @@ import com.rishabh.main.repo.EducationRepoInterface;
 public class EducationSvcImpl implements EducationSvcInterface {
 	
 	@Autowired
-	EducationRepoInterface educationRepo;
+	private EducationRepoInterface educationRepo;
 
 	@Override
 	public ResponseEntity<?> getAllEdu(int userId) {
