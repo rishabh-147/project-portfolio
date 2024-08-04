@@ -1,7 +1,3 @@
-Sure! Here's a comprehensive README file that documents all the controllers you've provided, including their purpose, endpoints, and usage.
-
----
-
 # API Documentation
 
 ## Overview
