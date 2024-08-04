@@ -12,7 +12,7 @@ import com.rishabh.main.repo.ContactRepoInterface;
 public class ContactSvcImpl implements ContactSvcInterface {
 	
 	@Autowired
-	ContactRepoInterface contactRepo;
+	private ContactRepoInterface contactRepo;
 
 	@Override
 	public ResponseEntity<?> getAllContact(int userId) {

@@ -12,7 +12,7 @@ import com.rishabh.main.repo.UserDetailsRepoInterface;
 public class UserDetailsSvcImpl implements UserDetailsSvcInterface{
 	
 	@Autowired
-	UserDetailsRepoInterface userDetailsRepo ;
+	private UserDetailsRepoInterface userDetailsRepo ;
 
 	@Override
 	public ResponseEntity<?> getUserDetails(int userId) {

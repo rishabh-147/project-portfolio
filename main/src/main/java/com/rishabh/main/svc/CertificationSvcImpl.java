@@ -5,10 +5,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.rishabh.main.domain.Certification;
 import com.rishabh.main.repo.CertificationRepoInterface;
 
+@Service
 public class CertificationSvcImpl implements CertificationSvcInterface{
 
 	@Autowired
@@ -21,3 +23,4 @@ public class CertificationSvcImpl implements CertificationSvcInterface{
 	}
 
 }
+

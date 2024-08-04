@@ -8,7 +8,7 @@ import com.rishabh.main.repo.SkillRepoInterface;
 public class SkillSvcImpl implements SkillSvcInterface{
 	
 	@Autowired
-	SkillRepoInterface skillRepo;
+	private SkillRepoInterface skillRepo;
 
 	@Override
 	public ResponseEntity<?> getAll(int userId) {

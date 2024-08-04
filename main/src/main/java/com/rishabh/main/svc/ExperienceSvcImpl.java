@@ -9,10 +9,11 @@ import org.springframework.http.ResponseEntity;
 import com.rishabh.main.domain.Experience;
 import com.rishabh.main.repo.ExperienceRepoInterface;
 
+
 public class ExperienceSvcImpl implements ExperienceSvcInterface {
 	
 	@Autowired
-	ExperienceRepoInterface experienceRepo;
+	private ExperienceRepoInterface experienceRepo;
 
 	@Override
 	public ResponseEntity<?> getExpByCompany(String companyName) {
