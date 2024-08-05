@@ -190,7 +190,7 @@ Certainly! Here's a simple tabular list of fully qualified URLs for all the cont
 | **Social Media Controller**   | Get All Social Media Records for a User    | `http://localhost:8080/socialmedia/all/1`         |
 | **User Details Controller**   | Get User Details                           | `http://localhost:8080/user-details/getUser/1`    |
 
-This table lists each controller, a brief description of the endpoint, and the fully qualified URL with `userId` set to `1` where applicable. For endpoints that don't use `userId`, such as the Experience Controller or Social Media by Platform, example values are provided.
----
 
-This README provides a structured and detailed overview of all the controllers in your application. Adjust or expand the documentation as necessary to match any additional specifics or requirements.
+---
+#### [Made with ❤️**Rishabh Tiwari**](https://github.com/rishabh-147)
+
