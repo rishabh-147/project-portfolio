@@ -22,7 +22,7 @@ public class ExperienceRepoImpl implements ExperienceRepoInterface {
 	
 	@Override
 	public List<Experience> getExpByCompany(String companyName) {
-		return jdbcTemplate.query(QueryConstants.GET_EXPERIENCE_DETAILS, new RowMapper<Experience> () {
+		return jdbcTemplate.query(QueryConstants.GET_EXPERIENCE_BY_Company_DETAILS, new RowMapper<Experience> () {
 
 			@Override
 			public Experience mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -44,6 +44,33 @@ public class ExperienceRepoImpl implements ExperienceRepoInterface {
 			}
 			
 		},companyName);	
+	}
+
+	@Override
+	public List<Experience> getAll(int userId) {
+		
+		return jdbcTemplate.query(QueryConstants.GET_EXPERIENCE_BY_Company_DETAILS, new RowMapper<Experience> () {
+
+			@Override
+			public Experience mapRow(ResultSet rs, int rowNum) throws SQLException {
+			Experience experience = new Experience();
+			experience.setExperienceId(rs.getLong("experienceId"));
+			experience.setUserId(rs.getLong("userId"));
+			experience.setTitle(rs.getString("title"));;
+			experience.setCompany(rs.getString("company"));
+			experience.setLocation(rs.getString("location"));
+			experience.setStartDate(rs.getObject("startDate", LocalDate.class));
+			experience.setEndDate(rs.getObject("endDate", LocalDate.class));
+			experience.setDescription(rs.getString("description"));
+			experience.setCurrentlyWorking(rs.getBoolean("currentlyWorking"));
+			experience.setCreatedAt(rs.getObject("createdAt", LocalDateTime.class));
+			experience.setUpdatedAt(rs.getObject("updatedAt", LocalDateTime.class));
+							
+								
+				return experience;
+			}
+			
+		},userId);
 	}
 
 }
