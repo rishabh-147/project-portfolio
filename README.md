@@ -80,14 +80,24 @@ This document provides detailed information about the controllers in the applica
 
 ### Endpoints
 
-#### GET /exp/all/{companyName}
+#### GET /exp/filtered/{companyName}
 
-- **Description:** Retrieves all experience records related to a specific company.
+- **Description:** Retrieves experience records filtered by the specified company name.
 - **Path Variable:**
   - `companyName` (String): The name of the company.
 - **Responses:**
-  - **200 OK:** Successfully retrieves the list of experience records.
+  - **200 OK:** Successfully retrieves the filtered experience records.
   - **404 Not Found:** No experience records found for the given company name.
+  - **500 Internal Server Error:** An error occurred on the server.
+
+#### GET /exp/all/{userId}
+
+- **Description:** Retrieves all experience records related to a specific user ID.
+- **Path Variable:**
+  - `userId` (int): The ID of the user.
+- **Responses:**
+  - **200 OK:** Successfully retrieves the list of experience records for the specified user ID.
+  - **404 Not Found:** No experience records found for the given user ID.
   - **500 Internal Server Error:** An error occurred on the server.
 
 ## Project Skill Controller
@@ -184,12 +194,12 @@ Certainly! Here's a simple tabular list of fully qualified URLs for all the cont
 | **Certificate Controller**    | Get All Certifications for a User          | `http://localhost:8080/certificate/all/1`         |
 | **Contact Controller**        | Get All Contacts for a User                | `http://localhost:8080/contact/all/1`             |
 | **Education Controller**      | Get All Education Records for a User       | `http://localhost:8080/edu/all/1`                 |
-| **Experience Controller**     | Get All Experience Records by Company      | `http://localhost:8080/exp/all/TechCorp`          |
+| **Experience Controller**     | Get Experience Records Filtered by Company | `http://localhost:8080/exp/filtered/TechCorp`     |
+| **Experience Controller**     | Get All Experience Records for a User      | `http://localhost:8080/exp/all/1`                 |
 | **Project Skill Controller**  | Get Project Details                       | `http://localhost:8080/getProjects/getDetails/1` |
 | **Social Media Controller**   | Get Social Media Data by Platform          | `http://localhost:8080/socialmedia/platform/Twitter` |
 | **Social Media Controller**   | Get All Social Media Records for a User    | `http://localhost:8080/socialmedia/all/1`         |
 | **User Details Controller**   | Get User Details                           | `http://localhost:8080/user-details/getUser/1`    |
-
 
 ---
 #### [Made with ❤️**Rishabh Tiwari**](https://github.com/rishabh-147)
