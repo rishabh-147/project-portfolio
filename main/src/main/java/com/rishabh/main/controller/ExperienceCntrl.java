@@ -16,8 +16,14 @@ public class ExperienceCntrl {
 	@Autowired
 	private ExperienceSvcInterface experienceSvc;
 	
-	@GetMapping("all/{companyName}")
-	public ResponseEntity<?> getAll(@PathVariable("companyName") String companyName){
+	@GetMapping("filtered/{companyName}")
+	public ResponseEntity<?> getfilteredExp(@PathVariable("companyName") String companyName){
 		return experienceSvc.getExpByCompany(companyName);
+	}
+	
+	
+	@GetMapping("all/{userId}")
+	public ResponseEntity<?> getAll(@PathVariable("userId") int userId){
+		return experienceSvc.getAll(userId);
 	}
 }

@@ -17,7 +17,7 @@ import com.rishabh.main.util.QueryConstants;
 public class ContactRepoImpl implements ContactRepoInterface {
 
 	@Autowired
-	JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbcTemplate;
 	
 
 	@Override

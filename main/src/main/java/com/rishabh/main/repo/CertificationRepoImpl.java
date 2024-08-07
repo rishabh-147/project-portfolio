@@ -27,7 +27,7 @@ public class CertificationRepoImpl implements CertificationRepoInterface {
 			public Certification mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Certification certification = new Certification();
 				certification.setCertificationId(rs.getInt("certificationId"));
-				certification.setUserId(rs.getInt(userId));
+				certification.setUserId(rs.getInt("userId"));
 				certification.setName(rs.getString("name"));
 				certification.setAuthority(rs.getString("authority"));
 				certification.setLicenseNumber(rs.getString("licenseNumber"));

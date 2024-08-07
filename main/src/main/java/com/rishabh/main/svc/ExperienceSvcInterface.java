@@ -1,9 +1,12 @@
 package com.rishabh.main.svc;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-@Service
-public interface ExperienceSvcInterface {
+import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
+import com.rishabh.main.domain.Experience;
+
+public interface ExperienceSvcInterface {
+	public ResponseEntity<?> getAll(int userId);
 	public ResponseEntity<?> getExpByCompany(String companyName);
 }
