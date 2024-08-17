@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.rishabh.main.domain.UserDetails;
 import com.rishabh.main.repo.UserDetailsRepoInterface;
 
+
 @Service
 public class UserDetailsSvcImpl implements UserDetailsSvcInterface{
 	

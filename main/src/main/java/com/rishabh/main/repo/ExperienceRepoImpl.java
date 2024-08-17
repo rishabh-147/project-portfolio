@@ -54,17 +54,17 @@ public class ExperienceRepoImpl implements ExperienceRepoInterface {
 			@Override
 			public Experience mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Experience experience = new Experience();
-			experience.setExperienceId(rs.getLong("experienceId"));
-			experience.setUserId(rs.getLong("userId"));
+			experience.setExperienceId(rs.getLong("experience_Id"));
+			experience.setUserId(rs.getLong("user_Id"));
 			experience.setTitle(rs.getString("title"));;
 			experience.setCompany(rs.getString("company"));
 			experience.setLocation(rs.getString("location"));
-			experience.setStartDate(rs.getObject("startDate", LocalDate.class));
-			experience.setEndDate(rs.getObject("endDate", LocalDate.class));
+			experience.setStartDate(rs.getObject("start_Date", LocalDate.class));
+			experience.setEndDate(rs.getObject("end_Date", LocalDate.class));
 			experience.setDescription(rs.getString("description"));
-			experience.setCurrentlyWorking(rs.getBoolean("currentlyWorking"));
-			experience.setCreatedAt(rs.getObject("createdAt", LocalDateTime.class));
-			experience.setUpdatedAt(rs.getObject("updatedAt", LocalDateTime.class));
+			experience.setCurrentlyWorking(rs.getBoolean("currently_Working"));
+			experience.setCreatedAt(rs.getObject("created_At", LocalDateTime.class));
+			experience.setUpdatedAt(rs.getObject("updated_At", LocalDateTime.class));
 							
 								
 				return experience;
